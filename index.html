@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zentrix Attendance | Asistencia escolar desde el celular</title>
+<meta name="description" content="Los docentes pasan lista desde su celular y la dirección ve las faltas por estudiante y por curso. Inscribe tu colegio a la beta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#inicio">Zentrix Attendance</a>
+  <nav aria-label="Principal">
+    <a href="#problema">Problema</a>
+    <a href="#prototipo">Prototipo</a>
+    <a href="#publico">Para quién</a>
+  </nav>
+  <a class="btn btn-small" href="#beta">Unirme a la beta</a>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div>
+    <p class="tag">Beta para colegios e institutos</p>
+    <h1>Pasar lista en un minuto. Saber quién falta, al instante.</h1>
+    <p class="lead">Zentrix Attendance permite que el docente registre presentes, faltas y licencias desde su celular, y que la dirección vea las inasistencias por estudiante y por curso sin juntar planillas.</p>
+    <div class="actions">
+      <a class="btn" href="#beta">Inscribir mi colegio a la beta</a>
+      <a class="btn btn-ghost" href="#prototipo">Probar el prototipo</a>
+    </div>
+  </div>
+  <figure class="hero-fig" aria-label="Resumen de asistencia de ejemplo">
+    <div class="sumcard">
+      <p class="sumtitle">3.° B · Resumen del día</p>
+      <div class="sumrow"><span class="dot ok"></span>Presentes<strong>27</strong></div>
+      <div class="sumrow"><span class="dot late"></span>Licencias<strong>2</strong></div>
+      <div class="sumrow"><span class="dot bad"></span>Faltas<strong>1</strong></div>
+      <p class="sumnote">Datos de ejemplo</p>
+    </div>
+  </figure>
+</section>
+
+<section id="problema" class="section">
+  <h2>El problema</h2>
+  <p class="lead">En muchos colegios la asistencia todavía se anota en papel o en planillas sueltas. Eso trae tres dolores:</p>
+  <div class="pains">
+    <article>
+      <h3>Tiempo de clase perdido</h3>
+      <p>Pasar lista en papel y copiar los datos después le quita minutos al docente cada día.</p>
+    </article>
+    <article>
+      <h3>Informes tardíos</h3>
+      <p>La dirección espera a que se junten las planillas para saber cuántas faltas tiene cada estudiante.</p>
+    </article>
+    <article>
+      <h3>Reclamos sin respaldo</h3>
+      <p>Cuando una familia discute una falta, es difícil encontrar el registro exacto.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="valor">
+  <div class="split">
+    <div>
+      <h2>Una sola tarea, bien hecha</h2>
+      <p class="lead">Zentrix Attendance no es un sistema escolar gigante. Hace asistencia, y la hace simple.</p>
+    </div>
+    <dl class="benefits">
+      <div><dt>Rápido para el docente</dt><dd>Un toque por estudiante: presente, falta o licencias. Funciona desde el celular.</dd></div>
+      <div><dt>Claro para la dirección</dt><dd>Conteo automático de inasistencias por estudiante e informe por curso.</dd></div>
+      <div><dt>Con historial</dt><dd>Consulta la asistencia de cualquier estudiante y fecha en segundos.</dd></div>
+      <div><dt>Para varios cursos</dt><dd>La institución administra sus docentes, estudiantes y cursos en un solo lugar.</dd></div>
+      <div><dt>Datos separados por colegio</dt><dd>Cada institución tiene su propia base de datos, sin mezclarse con otras.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="prototipo" class="section">
+  <h2>Pruébalo: así pasa lista el docente</h2>
+  <p class="lead">Este es un prototipo de demostración. Toca Presente, Falta o Licencia en cada estudiante.</p>
+  <div class="proto">
+    <div class="phone" role="group" aria-label="Prototipo de lista de asistencia">
+      <div class="phone-head">
+        <strong>Matemática · 3.° B</strong>
+        <span id="fecha"></span>
+      </div>
+      <ul class="roll" id="roll"></ul>
+      <div class="counts" aria-live="polite">
+        <span><i class="dot ok"></i><b id="c-ok">0</b> presentes</span>
+        <span><i class="dot late"></i><b id="c-late">0</b> licencias</span>
+        <span><i class="dot bad"></i><b id="c-bad">0</b> faltas</span>
+      </div>
+      <button class="btn" id="save" type="button">Guardar asistencia</button>
+      <p id="save-msg" class="save-msg" role="status" aria-live="polite" hidden></p>
+    </div>
+    <div class="proto-side">
+      <h3>Qué muestra este prototipo</h3>
+      <ul>
+        <li>Registro de presentes, faltas y licencias con un toque.</li>
+        <li>Conteo en vivo mientras se pasa lista.</li>
+        <li>Las faltas acumuladas del mes junto a cada estudiante, para detectar casos a tiempo.</li>
+      </ul>
+      <p class="note">Los nombres y cifras son de ejemplo. En la beta se conectará con los cursos reales de tu colegio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publico" class="section alt">
+  <h2>¿Para quién es?</h2>
+  <div class="who">
+    <div>
+      <h3>Colegios privados e institutos</h3>
+      <p>Instituciones con varios cursos que hoy llevan la asistencia en papel, en Excel o con un sistema que les resulta pesado.</p>
+    </div>
+    <div>
+      <h3>Quien decide</h3>
+      <p>Directores y administradores, que necesitan información clara y a tiempo.</p>
+    </div>
+    <div>
+      <h3>Quien lo usa cada día</h3>
+      <p>Los docentes, que necesitan algo que no les quite tiempo de clase.</p>
+    </div>
+  </div>
+</section>
+
+<section id="beta" class="section contact">
+  <h2>Únete a la beta</h2>
+  <p class="lead">Cuéntanos sobre tu institución. Te contactaremos para mostrarte el sistema y escuchar qué necesita tu colegio.</p>
+
+  <form id="form" novalidate>
+    <div class="field">
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required>
+      <span class="err" id="e-nombre"></span>
+    </div>
+
+    <div class="field">
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" autocomplete="email" maxlength="120" required>
+      <span class="err" id="e-correo"></span>
+    </div>
+
+    <div class="field">
+      <label for="institucion">Colegio o institución</label>
+      <input id="institucion" name="institucion" type="text" maxlength="100" required>
+      <span class="err" id="e-institucion"></span>
+    </div>
+
+    <div class="field">
+      <label for="perfil">Tu perfil</label>
+      <select id="perfil" name="perfil" required>
+        <option value="">Selecciona una opción</option>
+        <option>Director o directora</option>
+        <option>Administrador o administradora</option>
+        <option>Docente</option>
+        <option>Otro</option>
+      </select>
+      <span class="err" id="e-perfil"></span>
+    </div>
+
+    <div class="field">
+      <label for="necesidad">¿Cómo llevan hoy la asistencia y qué te gustaría mejorar?</label>
+      <textarea id="necesidad" name="necesidad" rows="4" maxlength="500" required></textarea>
+      <span class="hint"><span id="count">0</span>/500</span>
+      <span class="err" id="e-necesidad"></span>
+    </div>
+
+    <div class="field">
+      <label for="interes">Tu interés en la beta</label>
+      <select id="interes" name="interes" required>
+        <option value="">Selecciona una opción</option>
+        <option>Quiero probarlo en mi colegio</option>
+        <option>Quiero ver una demostración</option>
+        <option>Quiero más información</option>
+        <option>Solo tengo curiosidad</option>
+      </select>
+      <span class="err" id="e-interes"></span>
+    </div>
+
+    <div class="field hp" aria-hidden="true">
+      <label for="web">No llenar este campo</label>
+      <input id="web" name="web" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="field check">
+      <input id="acepto" name="acepto" type="checkbox" required>
+      <label for="acepto">Acepto que usen estos datos solo para contactarme sobre la beta de Zentrix Attendance.</label>
+      <span class="err" id="e-acepto"></span>
+    </div>
+
+    <button class="btn" id="send" type="submit">Quiero unirme a la beta</button>
+    <p id="result" class="result" role="status" aria-live="polite" hidden></p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <strong>Zentrix Attendance</strong>
+  <span>Proyecto académico en fase beta · Contacto: [TU CORREO]</span>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

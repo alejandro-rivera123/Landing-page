@@ -1,4 +1,4 @@
-/ Configuración pública de Supabase.
+
 // La clave "anon" está pensada para ser pública: lo que protege tus datos son las
 // políticas RLS definidas en supabase.sql. NUNCA pegues aquí la clave "service_role".
 window.ZENTRIX_CONFIG = {
